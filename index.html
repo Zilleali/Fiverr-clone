@@ -1,102 +1,501 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Required Files Css -->
-    <link rel="stylesheet" href="/assest/css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"/>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <!-- Required Files Css -->
+  <link rel="stylesheet" href="/assest/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
 
 
-    <title>Fiverr.com | Clone </title>
+  <title>Fiverr.com | Clone </title>
 </head>
+<style>
+  #recog {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: -7px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    color: #b5b6ba;
+    background-color: rgb(248, 248, 248);
+  }
+</style>
+
 <body onload="show()">
-    <div id="navbar">
-        <div>
-          <a href="/?source=top_nav" class="site-logo"
-            ><svg
-              width="89"
-              height="27"
-              viewBox="0 0 89 27"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g fill="white">
-                <path
-                  d="m81.6 13.1h-3.1c-2 0-3.1 1.5-3.1 4.1v9.3h-6v-13.4h-2.5c-2 0-3.1 1.5-3.1 4.1v9.3h-6v-18.4h6v2.8c1-2.2 2.3-2.8 4.3-2.8h7.3v2.8c1-2.2 2.3-2.8 4.3-2.8h2zm-25.2 5.6h-12.4c.3 2.1 1.6 3.2 3.7 3.2 1.6 0 2.7-.7 3.1-1.8l5.3 1.5c-1.3 3.2-4.5 5.1-8.4 5.1-6.5 0-9.5-5.1-9.5-9.5 0-4.3 2.6-9.4 9.1-9.4 6.9 0 9.2 5.2 9.2 9.1 0 .9 0 1.4-.1 1.8zm-5.7-3.5c-.1-1.6-1.3-3-3.3-3-1.9 0-3 .8-3.4 3zm-22.9 11.3h5.2l6.6-18.3h-6l-3.2 10.7-3.2-10.8h-6zm-24.4 0h5.9v-13.4h5.7v13.4h5.9v-18.4h-11.6v-1.1c0-1.2.9-2 2.2-2h3.5v-5h-4.4c-4.3 0-7.2 2.7-7.2 6.6v1.5h-3.4v5h3.4z"
-                ></path>
-              </g>
-              <g fill="#1dbf73">
-                <path
-                  d="m85.3 27c2 0 3.7-1.7 3.7-3.7s-1.7-3.7-3.7-3.7-3.7 1.7-3.7 3.7 1.7 3.7 3.7 3.7z"
-                ></path>
-              </g></svg
-          ></a>
-        </div>
-        <ul id="navbar-list">
-          <li>Fiverr Business</li>
-          <li>Explore</li>
-          <li>English</li>
-          <!-- <li>₹ INR</li> -->
-          <li>Become a Seller</li>
-          <a href="./assest/pages/login.html"><li>Sign in</li></a>
-          <a href="./assest/pagessignup_card.html"><button>Join</button></a>
-        </ul>
-      </div>
+  <div id="navbar">
+    <div>
+      <a href="/?source=top_nav" class="site-logo"><svg width="89" height="27" viewBox="0 0 89 27" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g fill="white">
+            <path
+              d="m81.6 13.1h-3.1c-2 0-3.1 1.5-3.1 4.1v9.3h-6v-13.4h-2.5c-2 0-3.1 1.5-3.1 4.1v9.3h-6v-18.4h6v2.8c1-2.2 2.3-2.8 4.3-2.8h7.3v2.8c1-2.2 2.3-2.8 4.3-2.8h2zm-25.2 5.6h-12.4c.3 2.1 1.6 3.2 3.7 3.2 1.6 0 2.7-.7 3.1-1.8l5.3 1.5c-1.3 3.2-4.5 5.1-8.4 5.1-6.5 0-9.5-5.1-9.5-9.5 0-4.3 2.6-9.4 9.1-9.4 6.9 0 9.2 5.2 9.2 9.1 0 .9 0 1.4-.1 1.8zm-5.7-3.5c-.1-1.6-1.3-3-3.3-3-1.9 0-3 .8-3.4 3zm-22.9 11.3h5.2l6.6-18.3h-6l-3.2 10.7-3.2-10.8h-6zm-24.4 0h5.9v-13.4h5.7v13.4h5.9v-18.4h-11.6v-1.1c0-1.2.9-2 2.2-2h3.5v-5h-4.4c-4.3 0-7.2 2.7-7.2 6.6v1.5h-3.4v5h3.4z">
+            </path>
+          </g>
+          <g fill="#1dbf73">
+            <path d="m85.3 27c2 0 3.7-1.7 3.7-3.7s-1.7-3.7-3.7-3.7-3.7 1.7-3.7 3.7 1.7 3.7 3.7 3.7z"></path>
+          </g>
+        </svg></a>
+    </div>
+    <ul id="navbar-list">
+      <li>Fiverr Business</li>
+      <li>Explore</li>
+      <li>English</li>
+      <li>$ USD</li>
+      <li>Become a Seller</li>
+      <a href="./assest/pages/login.html">
+        <li>Sign in</li>
+      </a>
+      <a href="./assest/pages/signup.html"><button>Join</button></a>
+    </ul>
+  </div>
+  <div id="navbar">
+    <img class="logo"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Fiverr_Logo_09.2020.svg/1200px-Fiverr_Logo_09.2020.svg.png"
+      alt="logo">
 
-      <div id="Image-box"></div>
+    <input type="text" id="query" placeholder="What service are you looking for today">
+    <svg id="search" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M15.8906 14.6531L12.0969 10.8594C12.025 10.7875 11.9313 10.75 11.8313 10.75H11.4187C12.4031 9.60938 13 8.125 13 6.5C13 2.90937 10.0906 0 6.5 0C2.90937 0 0 2.90937 0 6.5C0 10.0906 2.90937 13 6.5 13C8.125 13 9.60938 12.4031 10.75 11.4187V11.8313C10.75 11.9313 10.7906 12.025 10.8594 12.0969L14.6531 15.8906C14.8 16.0375 15.0375 16.0375 15.1844 15.8906L15.8906 15.1844C16.0375 15.0375 16.0375 14.8 15.8906 14.6531ZM6.5 11.5C3.7375 11.5 1.5 9.2625 1.5 6.5C1.5 3.7375 3.7375 1.5 6.5 1.5C9.2625 1.5 11.5 3.7375 11.5 6.5C11.5 9.2625 9.2625 11.5 6.5 11.5Z">
+      </path>
+    </svg>
+    <h4 style="color: #1e1692;">Fiverr Business</h4>
+    <h4>Explore</h4>
+    <h4>English</h4>
+    <h4>₹ INR</h4>
+    <h4>Become a Seller</h4>
+    <a href="./login.html">
+      <h4 id="userid">Sign In</h4>
+    </a>
+    <a href="./signup_card.html"><button id="signup">Join</button></a>
+  </div>
+  <div id="Header">
+    <h1>
+      <span>Find the perfect</span> <i>freelance</i><span> services for your business</span>
+    </h1>
+    <div>
+      <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M15.8906 14.6531L12.0969 10.8594C12.025 10.7875 11.9313 10.75 11.8313 10.75H11.4187C12.4031 9.60938 13 8.125 13 6.5C13 2.90937 10.0906 0 6.5 0C2.90937 0 0 2.90937 0 6.5C0 10.0906 2.90937 13 6.5 13C8.125 13 9.60938 12.4031 10.75 11.4187V11.8313C10.75 11.9313 10.7906 12.025 10.8594 12.0969L14.6531 15.8906C14.8 16.0375 15.0375 16.0375 15.1844 15.8906L15.8906 15.1844C16.0375 15.0375 16.0375 14.8 15.8906 14.6531ZM6.5 11.5C3.7375 11.5 1.5 9.2625 1.5 6.5C1.5 3.7375 3.7375 1.5 6.5 1.5C9.2625 1.5 11.5 3.7375 11.5 6.5C11.5 9.2625 9.2625 11.5 6.5 11.5Z">
+        </path>
+      </svg>
+      <input type="text" placeholder='Try "building mobile app"' />
+      <button>Search</button>
+    </div>
+    <div>
+      <h6>Popular:</h6>
+      <button>Website Design</button>
+      <button>WordPress</button>
+      <button>Logo Design</button>
+      <button>NFT Art</button>
+    </div>
+  </div>
 
- <!-- footer -->
- <div id="footer"></div>
- <link rel="stylesheet" href="./assest/css/main.css" />
 
-<!-- Scripts -->
-<script type="module">
-    import { footer } from "./assest/js/footer.js";
-  
-    document.getElementById("footer").innerHTML = footer();
+  <!-- ====================================================   =================================================== -->
+
+  <!-- Home page slider container -->
+
+  <!-- Card SLide -->
+
+  <!-- ====================================================   =================================================== -->
+
+  <div id="homepage-first-slider"></div>
+
+  <script>
+    $(function () {
+      $("#homepage-first-slider").load("./assest/pages/homepage_first_slider.html");
+    });
   </script>
 
-  
+  <!-- ====================================================   =================================================== -->
+
+  <!-- Home page video container -->
+
+  <!-- ====================================================   =================================================== -->
+
+  <div id="home-page-video-container">
+    <div class="home-page-side-text">
+      <div class="home-page-side-text-heading">
+        A whole world of freelance talent at your fingertips
+      </div>
+      <div class="home-page-side-text-div">The best for every budget</div>
+      <div class="home-page-side-text-div-child">
+        Find high-quality services at every price point. No hourly rates, just
+        project-based pricing.
+      </div>
+      <div class="home-page-side-text-div">
+        <span class="home-page-check-icon" aria-hidden="true"
+          style="width: 24px; height: 24px; fill: rgb(122, 125, 133)"><svg width="24" height="24" viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8 1.75C4.54822 1.75 1.75 4.54822 1.75 8C1.75 11.4518 4.54822 14.25 8 14.25C11.4518 14.25 14.25 11.4518 14.25 8C14.25 4.54822 11.4518 1.75 8 1.75ZM0.25 8C0.25 3.71979 3.71979 0.25 8 0.25C12.2802 0.25 15.75 3.71979 15.75 8C15.75 12.2802 12.2802 15.75 8 15.75C3.71979 15.75 0.25 12.2802 0.25 8Z">
+            </path>
+            <path
+              d="M11.5303 5.46967C11.8232 5.76256 11.8232 6.23744 11.5303 6.53033L7.53033 10.5303C7.23744 10.8232 6.76256 10.8232 6.46967 10.5303L4.46967 8.53033C4.17678 8.23744 4.17678 7.76256 4.46967 7.46967C4.76256 7.17678 5.23744 7.17678 5.53033 7.46967L7 8.93934L10.4697 5.46967C10.7626 5.17678 11.2374 5.17678 11.5303 5.46967Z">
+            </path>
+          </svg></span>
+        Quality work done quickly
+      </div>
+      <div class="home-page-side-text-div-child">
+        Find the right freelancer to begin working on your project within
+        minutes.
+      </div>
+      <div class="home-page-side-text-div">
+        <span class="home-page-check-icon" aria-hidden="true"
+          style="width: 24px; height: 24px; fill: rgb(122, 125, 133)"><svg width="24" height="24" viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8 1.75C4.54822 1.75 1.75 4.54822 1.75 8C1.75 11.4518 4.54822 14.25 8 14.25C11.4518 14.25 14.25 11.4518 14.25 8C14.25 4.54822 11.4518 1.75 8 1.75ZM0.25 8C0.25 3.71979 3.71979 0.25 8 0.25C12.2802 0.25 15.75 3.71979 15.75 8C15.75 12.2802 12.2802 15.75 8 15.75C3.71979 15.75 0.25 12.2802 0.25 8Z">
+            </path>
+            <path
+              d="M11.5303 5.46967C11.8232 5.76256 11.8232 6.23744 11.5303 6.53033L7.53033 10.5303C7.23744 10.8232 6.76256 10.8232 6.46967 10.5303L4.46967 8.53033C4.17678 8.23744 4.17678 7.76256 4.46967 7.46967C4.76256 7.17678 5.23744 7.17678 5.53033 7.46967L7 8.93934L10.4697 5.46967C10.7626 5.17678 11.2374 5.17678 11.5303 5.46967Z">
+            </path>
+          </svg></span>
+        Protected payments, every time
+      </div>
+      <div class="home-page-side-text-div-child">
+        Always know what you'll pay upfront. Your payment isn't released until
+        you approve the work.
+      </div>
+      <div class="home-page-side-text-div">
+        <span class="home-page-check-icon" aria-hidden="true"
+          style="width: 24px; height: 24px; fill: rgb(122, 125, 133)"><svg width="24" height="24" viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8 1.75C4.54822 1.75 1.75 4.54822 1.75 8C1.75 11.4518 4.54822 14.25 8 14.25C11.4518 14.25 14.25 11.4518 14.25 8C14.25 4.54822 11.4518 1.75 8 1.75ZM0.25 8C0.25 3.71979 3.71979 0.25 8 0.25C12.2802 0.25 15.75 3.71979 15.75 8C15.75 12.2802 12.2802 15.75 8 15.75C3.71979 15.75 0.25 12.2802 0.25 8Z">
+            </path>
+            <path
+              d="M11.5303 5.46967C11.8232 5.76256 11.8232 6.23744 11.5303 6.53033L7.53033 10.5303C7.23744 10.8232 6.76256 10.8232 6.46967 10.5303L4.46967 8.53033C4.17678 8.23744 4.17678 7.76256 4.46967 7.46967C4.76256 7.17678 5.23744 7.17678 5.53033 7.46967L7 8.93934L10.4697 5.46967C10.7626 5.17678 11.2374 5.17678 11.5303 5.46967Z">
+            </path>
+          </svg></span>
+        24/7 support
+      </div>
+      <div class="home-page-side-text-div-child">
+        Questions? Our round-the-clock support team is available to help
+        anytime, anywhere.
+      </div>
+    </div>
+
+    <div class="home-page-video-portion">
+      <div id="light">
+        <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
+        <video id="VisaChipCardVideo" width="800" controls>
+          <source src="https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/vmvv3czyk2ifedefkau7"
+            type="video/mp4" />
+        </video>
+      </div>
+
+      <div id="fade" onClick="lightbox_close();"></div>
+
+      <div style="padding: 0 44px 10px 0;">
+        <a href="#light" id="video-anchor-tag" onclick="lightbox_open();">
+          <img class="light-vd"
+            src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_900,dpr_2.0/v1/attachments/generic_asset/asset/089e3bb9352f90802ad07ad9f6a4a450-1599517407052/selling-proposition-still-1400-x1.png"
+            alt="Fiver image" width="700" height="450" />
+          <img class="video-icon" src=".\\assest\\img\\ico\\play.png" alt="" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================   =================================================== -->
+
+  <!-- Explore the marketplace -->
+
+  <!-- ====================================================   =================================================== -->
+
+  <div class="explore-marketplace-container">
+    <div class="explore-marketplace-container-div-heading">
+      Explore the marketplace
+    </div>
+    <div class="explore-marketplace-container-child">
+      <a href="#" class="explore-marketplace-anchor-tag">
+        <img
+          src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/graphics-design.d32a2f8.svg"
+          alt="Graphics &amp; Design" loading="lazy" />
+        <br />
+        Graphics & Design
+      </a>
+      <a href="#" class="explore-marketplace-anchor-tag">
+        <img
+          src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/online-marketing.74e221b.svg"
+          alt="Digital Marketing" loading="lazy" />
+        <br />
+        Digital Mareketing
+      </a>
+      <a href="#" class="explore-marketplace-anchor-tag">
+        <img
+          src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/writing-translation.32ebe2e.svg"
+          alt="Writing &amp; Translation" loading="lazy" />
+        <br />Writing & Translation
+      </a>
+      <a href="#" class="explore-marketplace-anchor-tag">
+        <img
+          src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/video-animation.f0d9d71.svg"
+          alt="Video &amp; Animation" loading="lazy" /><br />Video & Animation
+      </a>
+      <a href="#" class="explore-marketplace-anchor-tag">
+        <img
+          src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/music-audio.320af20.svg"
+          alt="Music &amp; Audio" loading="lazy" /><br />Music & Audio
+      </a>
+      <a href="#" class="explore-marketplace-anchor-tag">
+        <img
+          src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/programming.9362366.svg"
+          alt="Programming &amp; Tech" loading="lazy" /><br />Programming & Tech
+      </a>
+      <a href="#" class="explore-marketplace-anchor-tag">
+        <img
+          src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/business.bbdf319.svg"
+          alt="Business" loading="lazy" /><br />Business
+      </a>
+      <a href="#" class="explore-marketplace-anchor-tag">
+        <img
+          src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/lifestyle.745b575.svg"
+          alt="Lifestyle" loading="lazy" /><br />Lifestyle
+      </a>
+      <a href="#" class="explore-marketplace-anchor-tag">
+        <img
+          src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/lifestyle.745b575.svg"
+          alt="Lifestyle" loading="lazy" /><br />Data
+      </a>
+      <a href="#" class="explore-marketplace-anchor-tag">
+        <img
+          src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/lifestyle.745b575.svg"
+          alt="Lifestyle" loading="lazy" /><br />Photography
+
+      </a>
+      
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div id="Image-box"></div> -->
+
+
+
+
+
+
+
+
+
+
+  <!-- -----------
+            Footer Start
+      ------------------->
+  <footer>
+    <div>
+      <ul>
+        <li>
+          <h4>Categories</h4>
+        </li>
+        <li><a href="#">Graphics & Design</a></li>
+        <li><a href="#">Digital Marketing</a></li>
+        <li><a href="#">Writing & Translation</a></li>
+        <li><a href="#">Video & Animation</a></li>
+        <li><a href="#">Music & Audio</a></li>
+        <li><a href="#">Programming & Tech</a></li>
+        <li><a href="#">Data</a></li>
+        <li><a href="#">Business</a></li>
+        <li><a href="#">Lifestyle</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <ul>
+        <li>
+          <h4>About</h4>
+        </li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press & News</a></li>
+        <li><a href="#">Partnerships</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Intellectual Property Claims</a></li>
+        <li><a href="#">Investor Relations</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <ul>
+        <li>
+          <h4>Support</h4>
+        </li>
+        <li><a href="#">Help & Support</a></li>
+        <li><a href="#">Trust & Safety</a></li>
+        <li><a href="#">Selling on Fiverr</a></li>
+        <li><a href="#">Buying on Fiverr</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <ul>
+        <li>
+          <h4>Community</h4>
+        </li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Forum</a></li>
+        <li><a href="#">Community Standards</a></li>
+        <li><a href="#">Podcast</a></li>
+        <li><a href="#">Affiliates</a></li>
+        <li><a href="#">Invite a Friend</a></li>
+        <li><a href="#">Become a Seller</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <ul>
+        <li>
+          <h4>More From Fiverr</h4>
+        </li>
+        <li><a href="#">Fiverr Business</a></li>
+        <li><a href="#">Fiverr Pro</a></li>
+        <li><a href="#">Fiverr Studios</a></li>
+        <li><a href="#">Fiverr Logo Maker</a></li>
+        <li><a href="#">Fiverr Guides</a></li>
+        <li><a href="#">Get Inspired</a></li>
+        <li><a href="#">Fiverr Select</a></li>
+        <li><a href="#">ClearVoice <br><span>Content Marketing</span></a></li>
+
+        <li><a href="#">Fiverr Workspace<br><span>Invoice Software</span></a></li>
+
+        <li><a href="#">Learn<br><span>Online Courses</span></a></li>
+
+        <li><a href="#">Working Not Working</a></li>
+      </ul>
+    </div>
+  </footer>
+  <div id="lowerFooter">
+    <!-- logo -->
+    <div id="footerLogo">
+      <div>
+        <svg width="91" height="27" viewBox="0 0 91 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#7A7D85">
+            <path
+              d="m82.9 13.1h-3.2c-2.1 0-3.2 1.5-3.2 4.1v9.3h-6.1v-13.4h-2.6c-2.1 0-3.2 1.5-3.2 4.1v9.3h-6.1v-18.4h6.1v2.8c1-2.2 2.4-2.8 4.4-2.8h7.4v2.8c1-2.2 2.4-2.8 4.4-2.8h2v5zm-25.6 5.6h-12.6c.3 2.1 1.6 3.2 3.8 3.2 1.6 0 2.8-.7 3.1-1.8l5.4 1.5c-1.3 3.2-4.6 5.1-8.5 5.1-6.6 0-9.6-5.1-9.6-9.5 0-4.3 2.6-9.4 9.2-9.4 7 0 9.3 5.2 9.3 9.1 0 .9 0 1.4-.1 1.8zm-5.9-3.5c-.1-1.6-1.3-3-3.3-3-1.9 0-3.1.8-3.4 3zm-23.1 11.3h5.3l6.7-18.3h-6.1l-3.2 10.7-3.4-10.8h-6.1zm-24.9 0h6v-13.4h5.7v13.4h6v-18.4h-11.6v-1.1c0-1.2.9-2 2.3-2h3.5v-5h-4.4c-4.5 0-7.5 2.7-7.5 6.6v1.5h-3.4v5h3.4z">
+            </path>
+          </g>
+          <g fill="#7A7D85">
+            <path
+              d="m90.4 23.3c0 2.1-1.6 3.7-3.8 3.7s-3.8-1.6-3.8-3.7 1.6-3.7 3.8-3.7c2.2-.1 3.8 1.5 3.8 3.7zm-.7 0c0-1.8-1.3-3.1-3.1-3.1s-3.1 1.3-3.1 3.1 1.3 3.1 3.1 3.1 3.1-1.4 3.1-3.1zm-1.7.8.1.9h-.7l-.1-.9c0-.3-.2-.5-.5-.5h-.8v1.4h-.7v-3.5h1.4c.7 0 1.2.4 1.2 1.1 0 .4-.2.6-.5.8.4.1.5.3.6.7zm-1.9-1h.7c.4 0 .5-.3.5-.5 0-.3-.2-.5-.5-.5h-.7z">
+            </path>
+          </g>
+        </svg>
+      </div>
+
+      <div>
+        <span>©Fiverr
+          International Ltd. 2023</span>
+      </div>
+    </div>
+
+    <!-- copyright End -->
+
+    <!-- social links -->
+    <div id="socialLinks">
+      <a href="https://twitter.com/fiverr">
+        <img src=".\\assest\\img\\ico\\twitter.png" />
+      </a>
+      <a href="https://www.facebook.com/Fiverr/">
+        <img src=".\\assest\\img\\ico\\facebook.png" />
+      </a>
+      <a href="https://www.linkedin.com/company/fiverr-com/">
+        <img src=".\\assest\\img\\ico\\linkedin.png" />
+      </a>
+      <a href="https://www.pinterest.com/fiverr/">
+        <img src=".\\assest\\img\\ico\\pinterest.png" />
+      </a>
+      <a href="https://www.instagram.com/fiverr/">
+        <img src=".\\assest\\img\\ico\\instagram.png" />
+      </a>
+      <a href="">
+        <i class="fa-solid"></i>
+        <span>English</span>
+      </a>
+      <a href="#">
+        <span>$ USD</span>
+      </a>
+      <a href="#">
+        <img src=".\\assest\\img\\ico\\human.png" />
+      </a>
+    </div>
+    </footer>
+    <!-- footer  End-->
+
+
+    <script src="./assest/js/slider.js"></script>
+    <script src="./assest/js/main.js"></script>
+    <script src="./assest/js/index.js"></script>
+    <script src="./assest/js/homepage_first_slider.js"></script>
+
+    <script>
+      let container = document.getElementById("Image-box");
+      let count = 0;
+      setInterval(function () {
+        if (count == 0) {
+          container.style.backgroundImage =
+            "url('https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/93085acc959671e9e9e77f3ca8147f82-1599427734108/bg-hero-4-1792-x1.png')";
+          container.style.backgroundColor = "#013914";
+        } else if (count == 1) {
+          container.style.backgroundImage =
+            "url('https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/2413b8415dda9dbd7756d02cb87cd4b1-1599595203045/bg-hero-2-1792-x1.png')";
+
+          container.style.backgroundColor = "#b64761";
+        } else if (count == 2) {
+          container.style.backgroundImage =
+            "url('https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/bb5958e41c91bb37f4afe2a318b71599-1599344049983/bg-hero-1-1792-x1.png')";
+          container.style.backgroundColor = "#013914";
+        } else if (count == 3) {
+          container.style.backgroundImage =
+            "url('https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/bb5958e41c91bb37f4afe2a318b71599-1599344049970/bg-hero-5-1792-x1.png')";
+          container.style.backgroundColor = "#7c1a00";
+        } else if (count == 4) {
+          container.style.backgroundImage =
+            "url('https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/d14871e2d118f46db2c18ad882619ea8-1599835783966/bg-hero-3-1792-x1.png')";
+          container.style.backgroundColor = "#550e1f";
+        }
+
+        count++;
+        if (count > 4) {
+          count = 0;
+        }
+      }, 6000);
+    </script>
 
 </body>
+
 </html>
-<script>
-  let container = document.getElementById("Image-box");
-  let count = 0;
-  setInterval(function () {
-    if (count == 0) {
-      container.style.backgroundImage =
-        "url('https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/93085acc959671e9e9e77f3ca8147f82-1599427734108/bg-hero-4-1792-x1.png')";
-      container.style.backgroundColor = "#013914";
-    } else if (count == 1) {
-      container.style.backgroundImage =
-        "url('https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/2413b8415dda9dbd7756d02cb87cd4b1-1599595203045/bg-hero-2-1792-x1.png')";
-
-      container.style.backgroundColor = "#b64761";
-    } else if (count == 2) {
-      container.style.backgroundImage =
-        "url('https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/bb5958e41c91bb37f4afe2a318b71599-1599344049983/bg-hero-1-1792-x1.png')";
-      container.style.backgroundColor = "#013914";
-    } else if (count == 3) {
-      container.style.backgroundImage =
-        "url('https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/bb5958e41c91bb37f4afe2a318b71599-1599344049970/bg-hero-5-1792-x1.png')";
-      container.style.backgroundColor = "#7c1a00";
-    } else if (count == 4) {
-      container.style.backgroundImage =
-        "url('https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/d14871e2d118f46db2c18ad882619ea8-1599835783966/bg-hero-3-1792-x1.png')";
-      container.style.backgroundColor = "#550e1f";
-    }
-
-    count++;
-    if (count > 4) {
-      count = 0;
-    }
-  }, 6000);
-</script>

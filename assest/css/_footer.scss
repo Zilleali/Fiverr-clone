@@ -8,7 +8,7 @@
     display: flex;
     justify-content: center;
     gap: 70px;
-    font-size: 16px;
+    // font-size: 16px;
     margin: auto;
     font-weight: 500;
     font-family: Arial, Helvetica, sans-serif;
@@ -20,7 +20,7 @@
     color: #717379;
   }
   footer > div > ul > li > a:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
   footer > div > ul > li {
     list-style: none;
@@ -61,4 +61,10 @@
   ul > li > a > span:hover {
     color: gray;
   }
-  
+
+//   .collapse-content {
+//     display: none;
+//   }
+//   .collapse-container {
+//     display: none;
+// }  

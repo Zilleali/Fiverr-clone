@@ -1,55 +1,52 @@
 
 
-// #navbar {
-//   display: flex;
-//   justify-content: space-between;
-//   font-size: 17px;
-//   color: white;
-//   font-weight: bold;
-//   position: absolute;
-//   left: 12%;
-//   right: 12%;
-//   top: 20px;
-//   z-index: 1;
-//   span {
-//     font-family: Arial, Helvetica, sans-serif;
-//   }
-// }
-
-// #navbar-list {
-//     display: flex;
-//     list-style: none;
-//     gap: 20px;
-//     margin-top: 5px;
-//     align-items: center;
-//   }
-//   a{
-//     text-decoration: none;
-//     color: white;
-//   }
-  
-//   #navbar-list >a button {
-//     padding: 6px 20px;
-//     font-size: 16px;
-//     font-weight: bold;
-//     color: white;
-//     border: 1px solid white;
-//     background-color: transparent;
-//     transition: all 300ms ease-out;
-//     border-radius: 5px;
-//   }
-  
-//   #navbar-list >a button:hover {
-//     background-color: #1dbf73;
-//     color: white;
-//     border: 1px solid #1dbf73;
-//     cursor: pointer;
-//   }
-  
-body{
-    margin: 0px;
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  top: 20px;
+  z-index: 1;
+  span {
     font-family: Arial, Helvetica, sans-serif;
+  }
 }
+
+#navbar-list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin-top: 5px;
+    align-items: center;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  #navbar-list >a button {
+    padding: 6px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+    transition: all 300ms ease-out;
+    border-radius: 5px;
+  }
+  
+  #navbar-list >a button:hover {
+    background-color: #1dbf73;
+    color: white;
+    border: 1px solid #1dbf73;
+    cursor: pointer;
+  }
+  
+
 #navbar {
     margin: auto;
     border-bottom: #c9cacc 1px solid;
@@ -86,9 +83,9 @@ body{
     border-bottom-left-radius: 5px;
     border: 1px solid;
 }
-#navbar > input,button{
-    height: 30px;
-}
+// #navbar > input,button{
+//     height: 30px;
+// }
 .logo {
     height: 35%;
 }
