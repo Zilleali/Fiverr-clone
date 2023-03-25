@@ -120,7 +120,7 @@ window.document.onkeydown = function (e) {
     for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex - 1].style.display = "block",false;
+    slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += "active";
   }
   

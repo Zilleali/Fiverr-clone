@@ -543,7 +543,7 @@ footer {
   width: 85%;
   display: flex;
   justify-content: center;
-  gap: 70px;
+  gap: 69px;
   margin: auto;
   font-weight: 500;
   font-family: Arial, Helvetica, sans-serif;
@@ -563,6 +563,7 @@ footer > div > ul > li > a:hover {
 footer > div > ul > li {
   list-style: none;
   line-height: 40px;
+  width: 160px;
 }
 
 footer > div > ul > li > h4 {
@@ -622,6 +623,22 @@ ul > li > a > span:hover {
     flex-wrap: wrap;
     align-content: center;
     align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .explore-marketplace-container-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 40px;
+    align-content: center;
+  }
+  img.light-vd {
+    width: 400px;
+    height: 200px;
   }
 }
 @media (max-width: 767px) {
@@ -943,7 +960,7 @@ a {
   position: absolute;
   color: white;
   border-radius: 50%;
-  left: 42%;
+  left: 43%;
   background-color: rgba(0, 0, 0, 0.431372549);
   top: -260px;
   font-size: 100px;

@@ -7,7 +7,7 @@
     
     display: flex;
     justify-content: center;
-    gap: 70px;
+    gap: 69px;
     // font-size: 16px;
     margin: auto;
     font-weight: 500;
@@ -25,6 +25,7 @@
   footer > div > ul > li {
     list-style: none;
     line-height: 40px;
+    width: 160px;
   }
   footer > div > ul > li > h4 {
     line-height: 5px;

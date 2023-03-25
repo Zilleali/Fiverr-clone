@@ -1,17 +1,11 @@
-
 // Nav Bar
 @media (max-width: 767px) {
-  
-
-#navbar{
-    flex-direction: column;
+    #navbar {
+        flex-direction: column;
+    }
 }
 
-}
-
-
-
-//  Text with Video Section 
+//  Text with Video Section
 @media (max-width: 767px) {
     #home-page-video-container {
         display: flex;
@@ -23,23 +17,27 @@
         align-content: center;
         align-items: center;
     }
-
 }
 
-
-
-
-
-
-
-
-
+// Explore Market Section
+@media (max-width: 767px) {
+    .explore-marketplace-container-child {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        width: 90%;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 40px;
+        align-content: center;
+    }
+    img.light-vd {
+        width: 400px;
+        height: 200px;
+    }
+}
 
 //  Text with Video Section End
-
-
-
-
 
 // Footer querry's
 
@@ -64,12 +62,10 @@
         flex-direction: column;
         flex-wrap: nowrap;
         margin: 0 0 26px 39px;
-
     }
-    #footerLogo{
+    #footerLogo {
         flex-direction: column;
         gap: 0;
-
     }
     #socialLinks {
         display: flex;
@@ -82,13 +78,4 @@
         justify-content: center;
         margin-right: 0;
     }
-  }
-  
-
-
-
-
-
-
-
-
+}
